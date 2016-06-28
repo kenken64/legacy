@@ -1,0 +1,36 @@
+<div class="well">
+    <h1>Legacy API</h1>
+</div>
+
+<form>
+    <input type="text" class="form-control" placeholder="Search by name"/>
+</form>
+
+<table class="table table-striped">
+    <tr>
+        <td class="col-xs-1">#</td>
+        <td>Name</td>
+        <td class="col-xs-1">Department</td>
+        <td class="col-xs-1">Phone</td>
+        <td class="col-xs-1">Operation</td>
+    </tr>
+    <tr data-ng-repeat="user in ctrl.users">
+        <td>{{$index + 1}}</td>
+        <td>
+            <a data-ng-click="ctrl.addOrUpdateUser(user)">
+                {{user.firstName + " " + user.lastName}}
+            </a>
+        </td>
+        <td>{{user.department}}</td>
+        <td>{{user.phone}}</td>
+        <td>
+            <a class="btn btn-danger btn-xs">
+                <span class="glyphicon glyphicon-trash"></span>
+            </a>
+        </td>
+    </tr>
+</table>
+
+<div class="well" style="text-align: center; position: fixed; bottom: 0;left:0; right: 0; margin-bottom: 0;">
+    <a class="btn btn-default" data-ng-click="ctrl.addOrUpdateUser()">Add User</a>
+</div>

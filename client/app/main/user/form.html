@@ -1,0 +1,88 @@
+<form>
+    <div class="modal-header">
+        <h3 class="modal-title" style="display: inline;">User Form</h3>
+        <button data-ng-click="ctrl.close()"
+                type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="form-group col-xs-6">
+                <label>First Name</label>
+                <input type="text" class="form-control" data-ng-model="ctrl.user.firstName"/>
+            </div>
+            <div class="form-group col-xs-6">
+                <label>Last Name</label>
+                <input type="text" class="form-control" data-ng-model="ctrl.user.lastName"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-6">
+                <label>Employee Code</label>
+                <input type="text" class="form-control" data-ng-model="ctrl.user.employeeCode"/>
+            </div>
+            <div class="form-group col-xs-6">
+                <label>Department</label>
+                <input type="text" class="form-control" data-ng-model="ctrl.user.department"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-12">
+                <label>Line 1</label>
+                <input type="text" class="form-control" data-ng-model="ctrl.user.address.line1"/>
+            </div>
+            <div class="form-group col-xs-12">
+                <label>Line 2</label>
+                <input type="text" class="form-control" data-ng-model="ctrl.user.address.line2"/>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-6">
+                <label>City</label>
+                <input type="text" class="form-control" data-ng-model="ctrl.user.address.city"/>
+            </div>
+            <div class="form-group col-xs-6">
+                <label>State</label>
+                <input type="text" class="form-control" data-ng-model="ctrl.user.address.state"/>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-6">
+                <label>Postal Code</label>
+                <input type="text" class="form-control" data-ng-model="ctrl.user.address.postalCode"/>
+            </div>
+            <div class="form-group col-xs-6">
+                <label>Phone</label>
+                <input type="text" class="form-control" data-ng-model="ctrl.user.phone"/>
+            </div>
+            <div class="form-group col-xs-6">
+                <label>Nationality</label>
+                <input type="text" class="form-control" data-ng-model="ctrl.user.nationality"/>
+            </div>
+            <div class="form-group col-xs-6">
+                <label>Age</label>
+
+                <p class="input-group">
+                    <input type="number" class="form-control" data-ng-model="ctrl.user.age" ng-required="true"/>
+                </p>
+            </div>
+            <div class="form-group  col-xs-6">
+                <label>Active</label>
+
+                <div class="btn-group">
+                    <label class="btn btn-default" ng-model="ctrl.user.active" uib-btn-radio="true">Yes</label>
+                    <label class="btn btn-default" ng-model="ctrl.user.active" uib-btn-radio="false">No</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="pull-right">
+            <input type="button" value="Cancel" data-ng-click="ctrl.close()" class="btn btn-default"/>
+            <input type="submit" value="Save" class="btn btn-success"/>
+        </div>
+    </div>
+</form>
