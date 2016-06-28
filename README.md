@@ -17,8 +17,4 @@ Deploying to heroku.
 2. grunt buildControl:heroku;
 
 
-Usage: 
-
-grunt serve
-
 
